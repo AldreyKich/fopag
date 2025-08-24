@@ -1,0 +1,46 @@
+aks_fopag/
+│
+├── conexao.php                  # Arquivo central de conexão com o banco MySQL (PDO)
+├── index.php                   # Tela principal após login
+├── login.php                   # Tela de login
+├── logout.php                  # Destrói a sessão e volta para o login
+├── funcionalidade_nao_implementada.php  # Tela padrão para funcionalidades ainda não prontas
+│
+├── /assets/                    # Estáticos: CSS, JS, ícones
+│   └── (bootstrap, icons, etc.)
+│
+├── /relatorios/                # Arquivos PDF e Excel exportados da folha mensal
+│   └── Folha_07_2025_20250711_191530.pdf
+│
+├── /usuario/                   # Administração de usuários
+│   ├── usuario.php             # Cadastro e consulta de usuários
+│
+├── /pessoa/                    # Cadastro de pessoas
+│   ├── pessoa.php             # Formulário + consulta
+│
+├── /cargo/                     # Cadastro de cargos
+│   ├── cargo.php              # Formulário + consulta
+│
+├── /funcionario/               # Cadastro de funcionários
+│   ├── funcionario.php        # Formulário + consulta
+│
+├── /dependente/                # Cadastro de dependentes (para IRRF)
+│   ├── dependente.php         # Formulário + consulta
+│
+├── /tributos/
+│   ├── inss.php               # Cadastro das faixas do INSS (progresso por faixa com teto)
+│   ├── irrf.php               # Cadastro das faixas do IRRF
+│
+├── /evento/
+│   ├── evento_cadastro.php     # Cadastro de eventos (proventos e descontos)
+│   ├── evento_fixo.php         # Associação de eventos fixos a funcionários
+│   ├── evento_variavel.php     # Associação de eventos variáveis a funcionários
+│   ├── evento_incidencia_irrf.php # Incidência de eventos para IRRF
+│   ├── evento_incidencia_inss.php # Incidência de eventos para INSS
+│   ├── evento_incidencia_hora.php # Associação de eventos de tipo "H" com base em outro
+│
+├── calcular_folhamensal.php     # Geração da folha mensal, cálculo completo + exportação PDF/Excel
+├── confirmar_calculo.php        # Confirmação de substituição de folha existente
+│
+├── /consultas/
+│   └── consultar_folhamensal.php # Consulta da folha mensal com filtros (mês, cargo, funcionário)
